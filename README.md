@@ -25,7 +25,7 @@ into your own, following the process we've discussed in previous assignments, th
 
 ```
     Branch 1 starting name: flemingj2
-    Branch 2 starting name: irumava
+    Branch 2 starting name: irumvaa1
 ```
 
 ### References 
