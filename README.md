@@ -16,7 +16,9 @@
 
 **Source Assignment(s)**: `HW10 - Ciphers`
 
-**CRC Card(s)** `N/A`
+**CRC Card(s)**
+`base_cipher` : `https://docs.google.com/document/d/1PfQCP4ADzSkOFW_gapHCMgJt8FH1BvVtSwp8REpGecw/edit?tab=t.cw29oodb6gsb`
+
 **Branches**: This project will **require** effective use of git. 
 
 Each partner should create a branch at the beginning of the project, and stay on this branch (or branches of their 
@@ -42,7 +44,7 @@ N/A
 What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
 
 ```
-    **Replace this text with your reflection
+    We started off a little behind, but as direction of project has become cleaer and we have become more organized, the timline for comepleting the project has become more manageble.
 ```
 
 ---
