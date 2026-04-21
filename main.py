@@ -1,6 +1,5 @@
 from classes.main_window import *
 
-
 def main():
     window = MainWindow()
     window.create_gui()

@@ -1,20 +1,54 @@
 import tkinter as tk
+from tkinter import ttk
+
 
 class MainWindow:
     def __init__(self):
-        self.elements = None
+        self.elements = {
+            "frames": {},
+            "buttons": {}
+        }
         self.root = tk.Tk()
-
         self.root.minsize(width=350, height=300)
         self.root.maxsize(width=350, height=300)
         self.root.title("Cipher Tool")
-        #self.root.grid_slaves()
 
     def create_gui(self):
-        self.elements = {
-            "btn_encode": tk.Button(self.root, text="Encode"),
-            "btn_decode": tk.Button(self.root, text="Decode")
-        }
+        elm = self.elements
+        btn = elm["buttons"]
+        frame = elm["frames"]
+        wpx, hpx = self.wpx, self.hpx
 
-        self.elements.get("btn_encode").grid(row=0, column=0)
-        self.elements.get("btn_decode").grid(row=1, column=0)
+        frame["top_left"] = ttk.Frame(self.root, width=wpx(0.2), height=hpx(0.2))
+        btn["encode"] = tk.Button(frame["top_left"], text="Encode")
+        btn["decode"] = tk.Button(frame["top_left"], text='Decode')
+
+
+        frame["top_left"].grid(row=0, column=0)
+
+        for k, v in btn.items():
+            v.pack(expand=True)
+
+
+    def hpx(self, percent):
+        return self.sz(percent, axis="h")
+
+    def wpx(self, percent):
+        return self.sz(percent, "w")
+
+    def sz(self, percent, axis):
+        """
+        Takes percent (0-1) of given window axis "w" or "h" and returns as pixels.
+        :param axis: Window axis
+        :param percent: Percent of window
+        :return: Pixels
+        """
+        w,h = self.root.winfo_width(), self.root.winfo_height()
+        if axis == "w":
+            return w * percent
+        elif axis == "h":
+            return h * percent
+        else:
+            return 0
+
+
