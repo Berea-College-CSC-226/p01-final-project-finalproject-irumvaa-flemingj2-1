@@ -32,7 +32,7 @@ into your own, following the process we've discussed in previous assignments, th
 
 ### References 
 
-N/A
+- https://docs.python.org/3/library/tkinter.html
 
 ---
 
