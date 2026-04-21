@@ -14,12 +14,18 @@ class MainWindow:
         self.root.title("Cipher Tool")
 
     def create_gui(self):
+        """
+        Creates elements for window
+        :return:
+        """
         elm = self.elements
         btn = elm["buttons"]
         frame = elm["frames"]
         wpx, hpx = self.wpx, self.hpx
 
+
         frame["top_left"] = ttk.Frame(self.root, width=wpx(0.2), height=hpx(0.2))
+
         btn["encode"] = tk.Button(frame["top_left"], text="Encode")
         btn["decode"] = tk.Button(frame["top_left"], text='Decode')
 
@@ -29,11 +35,20 @@ class MainWindow:
         for k, v in btn.items():
             v.pack(expand=True)
 
-
     def hpx(self, percent):
+        """
+        Percent height to pixels
+        :param percent:
+        :return: pixels
+        """
         return self.sz(percent, axis="h")
 
     def wpx(self, percent):
+        """
+        Percent width to pixels
+        :param percent:
+        :return: pixels
+        """
         return self.sz(percent, "w")
 
     def sz(self, percent, axis):
@@ -50,5 +65,3 @@ class MainWindow:
             return h * percent
         else:
             return 0
-
-
