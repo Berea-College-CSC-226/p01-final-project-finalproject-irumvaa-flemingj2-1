@@ -16,7 +16,9 @@
 
 **Source Assignment(s)**: `HW10 - Ciphers`
 
-**CRC Card(s)** `N/A`
+**CRC Card(s)**
+[MainWindow](image/crc_MainWindow.png "MainWindow CRC")
+
 **Branches**: This project will **require** effective use of git. 
 
 Each partner should create a branch at the beginning of the project, and stay on this branch (or branches of their 
@@ -30,19 +32,19 @@ into your own, following the process we've discussed in previous assignments, th
 
 ### References 
 
-N/A
+- https://docs.python.org/3/library/tkinter.html
 
 ---
 
 ## Milestone 2: Code Setup and Issue Queue
 
-❗Most importantly, keep your issue queue up to date, and focus on your code. 🙃
+Most importantly, keep your issue queue up to date, and focus on your code. 🙃
 
-❗Reflect on what you’ve done so far. How’s it going? Are you feeling behind/ahead? What are you worried about? 
+Reflect on what you’ve done so far. How’s it going? Are you feeling behind/ahead? What are you worried about? 
 What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
 
 ```
-    **Replace this text with your reflection
+    We started off a little behind, but as direction of project has become cleaer and we have become more organized, the timline for comepleting the project has become more manageble.
 ```
 
 ---
