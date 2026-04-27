@@ -1,4 +1,5 @@
-
+import os
+from PIL import Image
 class InputConverter:
     """
     Handles converting user input into a format
@@ -9,10 +10,29 @@ class InputConverter:
         Source can be a file path or raw text """
         self.source = source #stores the input source inside the object
 
+    def detect_type(self, source):
+        """detects the types of input source"""
+        if isinstance(source, str):
+            if os.path.isfile(source):
+                return "file"
+            return "text"
+        return "unknown"
+
     def from_file(self, file_path):
-        """ Reads text input from a file"""
-        with open(file_path, "r", encoding="utf-8") as file:
-            return file.read()
+        """ Reads text input from a file and determines file type"""
+        extension= os.path.splitext(file_path)[1].lower()
+        if extension == ".txt":
+            with open(file_path, "r", encoding="utf-8") as file:
+                return file.read()
+        elif extension in [".png", ".jpg", ".jpeg"]:
+            return  self.from_image(file_path)
+        else:
+            raise ValueError("unsupported file type")
+
+    def from_image(self, image_path):
+        """Handles image input"""
+        image = Image.open(image_path)
+        return f"[IMAGE INPUT: {image.size}, mode={image.mode}]"
 
     def from_text(self, text):
         """ Accepts direct text input (GUI or CLI)"""
@@ -23,3 +43,13 @@ class InputConverter:
     def normalize(self, text):
         """ Normalizes text for cipher processing"""
         return text.strip()
+
+    def convert (self, source):
+        """"""
+        input_type = self.detect_type(source)
+        if input_type == "file":
+            return self.normalize(self.from_file(source))
+        elif input_type == "text":
+            return self.normalize(self.from_text(source))
+        else:
+            raise ValueError("Unknown input type") #
