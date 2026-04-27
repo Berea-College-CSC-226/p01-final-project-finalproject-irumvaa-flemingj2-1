@@ -1,3 +1,4 @@
+import tkinter
 import tkinter as tk
 from tkinter import ttk
 
@@ -6,34 +7,42 @@ class MainWindow:
     def __init__(self):
         self.elements = {
             "frames": {},
-            "buttons": {}
+            "buttons": {},
+            "textbox": {}
         }
         self.root = tk.Tk()
         self.root.minsize(width=350, height=300)
-        self.root.maxsize(width=350, height=300)
+        self.root.maxsize(width=3501, height=3001)
         self.root.title("Cipher Tool")
+        self.root.config(bg="#474448")
+        self.root.update_idletasks()
 
     def create_gui(self):
         """
-        Creates elements for window
+        Creates & setup elements for window
         :return:
         """
         elm = self.elements
         btn = elm["buttons"]
         frame = elm["frames"]
+        textbox = elm["textbox"]
         wpx, hpx = self.wpx, self.hpx
 
+        # init frames
+        frame["top_left"] = tk.Frame(self.root, width=wpx(0.2), height=hpx(0.2), bg="#f1f0ea")
 
-        frame["top_left"] = ttk.Frame(self.root, width=wpx(0.2), height=hpx(0.2))
-
+        # init buttons
         btn["encode"] = tk.Button(frame["top_left"], text="Encode")
         btn["decode"] = tk.Button(frame["top_left"], text='Decode')
 
+        # init textboxes
+        textbox["encode"] = tk.Text(frame["top_left"])
+        textbox["decode"] = tk.Text(frame["top_left"])
 
-        frame["top_left"].grid(row=0, column=0)
-
-        for k, v in btn.items():
-            v.pack(expand=True)
+        # configure layout
+        frame["top_left"].pack(side=tk.LEFT, fill=tk.Y)
+        btn["encode"].pack(side=tk.TOP, padx=20, pady=5)
+        btn["decode"].pack(side=tk.TOP, padx=20, pady=5)
 
     def hpx(self, percent):
         """
@@ -60,8 +69,8 @@ class MainWindow:
         """
         w,h = self.root.winfo_width(), self.root.winfo_height()
         if axis == "w":
-            return w * percent
+            return (w * percent) // 1
         elif axis == "h":
-            return h * percent
+            return (h * percent) // 1
         else:
             return 0
