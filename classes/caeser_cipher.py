@@ -6,7 +6,7 @@ class CaesarCipher(BaseCipher):
     inheriting from the BaseCipher class.
     """
 
-    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
     def __init__(self, key):
         """
@@ -24,10 +24,17 @@ class CaesarCipher(BaseCipher):
         result = ""
 
         for char in text:
-            if char in self.alphabet:
-                index = self.alphabet.index(char)
+            is_lower = True
+            if char in self.alphabet.upper():
+                is_lower = False
+
+            if char.lower() in self.alphabet.lower():
+                index = self.alphabet.lower().index(char.lower())
                 shifted_index = (index + self.key) % len(self.alphabet)
-                result += self.alphabet[shifted_index]
+                if is_lower:
+                    result += self.alphabet[shifted_index].lower()
+                else:
+                    result += self.alphabet[shifted_index].upper()
             else:
                 result += char
 
@@ -43,10 +50,18 @@ class CaesarCipher(BaseCipher):
         result = ""
 
         for char in text:
-            if char in self.alphabet:
-                index = self.alphabet.index(char)
+            is_lower = True
+            if char in self.alphabet.upper():
+                is_lower = False
+
+            if char.lower() in self.alphabet.lower():
+                index = self.alphabet.lower().index(char.lower())
                 shifted_index = (index - self.key) % len(self.alphabet)
-                result += self.alphabet[shifted_index]
+                if is_lower:
+                    result += self.alphabet[shifted_index].lower()
+                else:
+                    result += self.alphabet[shifted_index].upper()
+
             else:
                 result += char
 
