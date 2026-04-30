@@ -60,7 +60,16 @@ What has surprised you so far? Describe your general feelings. Be honest with yo
   before the deadline.
 
 ```
-    **Replace this with your reflection
+    Completion percentage: 45%
+    At this point, our project is approximately 45% complete. 
+    We have finished setting up the core code structure, implemented the base cipher architecture,
+    created the Caesar cipher, and established the initial GUI framework. We are currently working on input and output
+    handling, which will tie the system together. We are confident about completing the project on time because
+    the overall design is already in place, we just have to create more test units cases, and refine our GUI
+    To increase the likelihood of success, we plan to prioritize remaining core features, complete unit testing early,
+    and as Dr. Heggen suggested today in class, if we have a code that is running, create a new branch to make sure we
+    don't end up a situation where we keep adding stuff on our code and find out it is no longer running, which is gonna
+    reduce that final pressure.
 ```
 
 ---
