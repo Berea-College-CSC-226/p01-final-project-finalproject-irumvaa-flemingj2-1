@@ -1,6 +1,6 @@
-import tkinter
 import tkinter as tk
-from tkinter import ttk
+
+from rdkit.Dbase.DbModule import placeHolder
 
 
 class MainWindow:
@@ -11,8 +11,8 @@ class MainWindow:
             "textbox": {}
         }
         self.root = tk.Tk()
-        self.root.minsize(width=350, height=300)
-        self.root.maxsize(width=3501, height=3001)
+        self.root.minsize(width=450, height=300)
+        self.root.maxsize(width=450, height=300)
         self.root.title("Cipher Tool")
         self.root.config(bg="#474448")
         self.root.update_idletasks()
@@ -29,20 +29,26 @@ class MainWindow:
         wpx, hpx = self.wpx, self.hpx
 
         # init frames
-        frame["top_left"] = tk.Frame(self.root, width=wpx(0.2), height=hpx(0.2), bg="#f1f0ea")
-
+        frame["left_nav"] = tk.Frame(self.root, width=wpx(0.2), height=hpx(1), bg="#f1f0ea")
+        frame["right"] = tk.Frame(self.root, bg="#f1f0ea")
+        
         # init buttons
-        btn["encode"] = tk.Button(frame["top_left"], text="Encode")
-        btn["decode"] = tk.Button(frame["top_left"], text='Decode')
+        btn["encode"] = tk.Button(frame["left_nav"], text="Encode")
+        btn["decode"] = tk.Button(frame["left_nav"], text='Decode')
 
         # init textboxes
-        textbox["encode"] = tk.Text(frame["top_left"])
-        textbox["decode"] = tk.Text(frame["top_left"])
+        textbox["input"] = tk.Text(frame["right"], height=1)
+        textbox["output"] = tk.Text(frame["right"], height=1)
+        textbox["input"].insert(1.0, "input(placeholder)")
+        textbox["output"].insert(1.0, "output(placeholder)")
 
         # configure layout
-        frame["top_left"].pack(side=tk.LEFT, fill=tk.Y)
+        frame["left_nav"].pack(side=tk.LEFT, fill=tk.Y)
+        frame["right"].pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=10, pady=10)
         btn["encode"].pack(side=tk.TOP, padx=20, pady=5)
         btn["decode"].pack(side=tk.TOP, padx=20, pady=5)
+        textbox["input"].pack(side=tk.TOP, fill=tk.BOTH, expand=True, pady=10)
+        textbox["output"].pack(side=tk.BOTTOM, fill=tk.BOTH ,expand=True, pady=10)
 
     def hpx(self, percent):
         """
