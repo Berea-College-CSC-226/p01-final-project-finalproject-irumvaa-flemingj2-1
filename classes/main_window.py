@@ -1,8 +1,5 @@
 import tkinter as tk
 
-from rdkit.Dbase.DbModule import placeHolder
-
-
 class MainWindow:
     def __init__(self):
         self.elements = {
@@ -30,25 +27,28 @@ class MainWindow:
 
         # init frames
         frame["left_nav"] = tk.Frame(self.root, width=wpx(0.2), height=hpx(1), bg="#f1f0ea")
-        frame["right"] = tk.Frame(self.root, bg="#f1f0ea")
+        frame["right"] = tk.Frame(self.root, bg="#474448")
+        frame["input"] = tk.LabelFrame(frame["right"], text="Input", bg="#f1f0ea")
+        frame["output"] = tk.LabelFrame(frame["right"], text="Output", bg="#f1f0ea")
         
         # init buttons
         btn["encode"] = tk.Button(frame["left_nav"], text="Encode")
         btn["decode"] = tk.Button(frame["left_nav"], text='Decode')
 
         # init textboxes
-        textbox["input"] = tk.Text(frame["right"], height=1)
-        textbox["output"] = tk.Text(frame["right"], height=1)
-        textbox["input"].insert(1.0, "input(placeholder)")
-        textbox["output"].insert(1.0, "output(placeholder)")
+        textbox["input"] = tk.Text(frame["input"], height=1)
+        textbox["output"] = tk.Text(frame["output"], height=1)
+
 
         # configure layout
         frame["left_nav"].pack(side=tk.LEFT, fill=tk.Y)
         frame["right"].pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=10, pady=10)
+        frame["input"].pack(side=tk.TOP, fill=tk.BOTH, expand=True, pady=10)
+        frame["output"].pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True, pady=10)
         btn["encode"].pack(side=tk.TOP, padx=20, pady=5)
         btn["decode"].pack(side=tk.TOP, padx=20, pady=5)
-        textbox["input"].pack(side=tk.TOP, fill=tk.BOTH, expand=True, pady=10)
-        textbox["output"].pack(side=tk.BOTTOM, fill=tk.BOTH ,expand=True, pady=10)
+        textbox["input"].pack(fill=tk.BOTH, expand=True, pady=0)
+        textbox["output"].pack(fill=tk.BOTH, expand=True, pady=0)
 
     def hpx(self, percent):
         """
