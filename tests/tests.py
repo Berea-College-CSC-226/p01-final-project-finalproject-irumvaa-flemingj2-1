@@ -61,9 +61,9 @@ def main():
     tests = []
 
     # caser-cipher tests
-    caser = CaesarCipher(3)
-    add_test(tests, caser.encode, "DEF", "ABC")
-    add_test(tests, caser.decode, "ABC", "DEF")
+    caser = CaesarCipher(5)
+    add_test(tests, caser.encode, "fgh CDE!", "abc XYZ!")
+    add_test(tests, caser.decode, "abc XYZ!", "fgh CDE!")
 
 
     run_tests(tests)
