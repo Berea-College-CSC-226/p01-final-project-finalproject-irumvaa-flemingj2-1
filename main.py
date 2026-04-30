@@ -1,18 +1,16 @@
 from classes.main_window import *
 from classes.caeser_cipher import CaesarCipher
 
-def encode(event, window, cipher):
-    textbox = window.elements["textbox"]
-    encoded = cipher.encode(textbox["input"].get(1.0, "end"))
-    textbox["output"].delete(1.0, "end")
-    textbox["output"].insert(1.0, encoded)
+def encode(_event, window, cipher):
+    text = window.get_textbox_text("input")
+    encoded = cipher.encode(text)
+    window.set_textbox_text("output", encoded)
     return
 
-def decode(event, window, cipher):
-    textbox = window.elements["textbox"]
-    encoded = cipher.decode(textbox["input"].get(1.0, "end"))
-    textbox["output"].delete(1.0, "end")
-    textbox["output"].insert(1.0, encoded)
+def decode(_event, window, cipher):
+    text = window.get_textbox_text("input")
+    decoded = cipher.decode(text)
+    window.set_textbox_text("output", decoded)
     return
 
 def main():
