@@ -66,7 +66,7 @@ class MainWindow:
         entry["key"].insert(1, "0")
 
         # init combo-boxes
-        combo["cipher"] = ttk.Combobox(frame["left_nav"], values=("caesar", "symbol"), state="readonly")
+        combo["cipher"] = ttk.Combobox(frame["left_nav"], values=("caesar", "symbol", "morse"), state="readonly")
         combo["cipher"].set("caesar")
         combo["output"] = ttk.Combobox(frame["left_nav"], values=("text", "file"), state="readonly")
         combo["output"].set("text")

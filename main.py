@@ -1,6 +1,7 @@
-from classes.main_window import *
-from classes.caesar_cipher import CaesarCipher
+from classes.main_window import MainWindow
 from classes.output_generator import OutputGenerator
+from classes.caesar_cipher import CaesarCipher
+from classes.morse_cipher import MorseCipher
 
 def encode(_event, window, config, exporter):
     cipher = config["cipher"]
@@ -70,7 +71,8 @@ def main():
     # mutating vars
     ciphers = {
         "caesar": CaesarCipher(0),
-        "symbol": CaesarCipher(0)  # TODO
+        "symbol": CaesarCipher(0),  # TODO
+        "morse": MorseCipher()
     }
 
     config = {
