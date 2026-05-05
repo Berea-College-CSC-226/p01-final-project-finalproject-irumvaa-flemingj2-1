@@ -2,6 +2,7 @@ import types
 
 # imports for testing
 from classes.caesar_cipher import CaesarCipher
+from classes.morse_cipher import MorseCipher
 
 def add_test(tests, func, expected_output=None, *args):
     """
@@ -64,6 +65,11 @@ def main():
     add_test(tests, caser.encode, "fgh CDE!", "abc XYZ!")
     add_test(tests, caser.decode, "abc XYZ!", "fgh CDE!")
 
+    # morse-cipher tests
+    morse = MorseCipher()
+    morse_sequence = "....{0}..{0} {0}.----{0}..---{0}...--{0}!".format(morse.separator_char)
+    add_test(tests, morse.encode, morse_sequence, "hi 123!")
+    add_test(tests, morse.decode, "hi 123!", morse_sequence)
 
     run_tests(tests)
     pass
