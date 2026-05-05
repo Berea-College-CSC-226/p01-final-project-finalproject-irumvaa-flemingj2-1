@@ -1,7 +1,7 @@
 import types
 
 # imports for testing
-from classes.caeser_cipher import CaesarCipher
+from classes.caesar_cipher import CaesarCipher
 
 def add_test(tests, func, expected_output=None, *args):
     """
@@ -51,7 +51,6 @@ def run_tests(tests):
             print("errored test: {0} -> {1}".format(func.__name__, err))
 
     print("{0}/{1} TESTS PASSED!".format(tests_passed, tests_ran))
-
 
 def main():
     """

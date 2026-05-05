@@ -11,8 +11,10 @@ class MainWindow:
     def __init__(self):
         self.elements = {
             "frames": {},
-            "buttons": {},
-            "textbox": {}
+            "button": {},
+            "textbox": {},
+            "entry": {},
+            "label": {}
         }
         self.theme = my_theme
         self.root = tk.Tk()
@@ -28,9 +30,11 @@ class MainWindow:
         :return:
         """
         elm = self.elements
-        btn = elm["buttons"]
+        btn = elm["button"]
         frame = elm["frames"]
         textbox = elm["textbox"]
+        entry = elm["entry"]
+        label = elm["label"]
         theme = self.theme
         wpx, hpx = self.wpx, self.hpx
 
@@ -48,6 +52,11 @@ class MainWindow:
         textbox["input"] = tk.Text(frame["input"], height=1)
         textbox["output"] = tk.Text(frame["output"], height=1)
 
+        # init labels
+        label["key"] = tk.Label(frame["left_nav"], text="Key:")
+
+        # init entry boxes
+        entry["key"] = tk.Entry(frame["left_nav"])
 
         # configure layout
         frame["left_nav"].pack(side=tk.LEFT, fill=tk.Y, expand=True)
@@ -58,6 +67,8 @@ class MainWindow:
         btn["decode"].pack(side=tk.TOP, padx=20, pady=5)
         textbox["input"].pack(fill=tk.BOTH, expand=True)
         textbox["output"].pack(fill=tk.BOTH, expand=True)
+        label["key"].pack(side=tk.TOP, padx=15, pady=1)
+        entry["key"].pack(side=tk.TOP, padx=10, pady=5)
 
     def get_textbox_text(self, box):
         textbox = self.elements["textbox"][box]
