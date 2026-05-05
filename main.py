@@ -24,18 +24,36 @@ def update_key(_event, window, cipher):
 
     return
 
+def update_cipher(_event, window, ciphers):
+    selection = window.elements["combobox"]["cipher"].get()
+    use_cipher = ciphers["options"][selection]
+    ciphers["selected"] = use_cipher
+    return
+
 def main():
     window = MainWindow()
-    use_cipher = CaesarCipher(5)
+    ciphers = {
+        "selected": None,
+        "options": {
+            "caesar": CaesarCipher(0),
+            "symbol": CaesarCipher(0) # TODO
+        }
+    }
     window.create_gui()
 
+    # ui elements to be binded
     entry = window.elements["entry"]
     btn = window.elements["button"]
+    combo = window.elements["combobox"]
+
+    # init default state selection
+    update_cipher("init", window, ciphers)
 
     # bind events
-    btn["encode"].bind("<Button-1>", lambda event: encode(event, window, use_cipher))
-    btn["decode"].bind("<Button-1>", lambda event: decode(event, window, use_cipher))
-    entry["key"].bind("<FocusOut>", lambda event: update_key(event, window, use_cipher))
+    btn["encode"].bind("<Button-1>", lambda event: encode(event, window, ciphers["selected"]))
+    btn["decode"].bind("<Button-1>", lambda event: decode(event, window, ciphers["selected"]))
+    entry["key"].bind("<FocusOut>", lambda event: update_key(event, window, ciphers["selected"]))
+    combo["cipher"].bind('<<ComboboxSelected>>', lambda event: update_cipher(event, window, ciphers))
 
     window.root.mainloop()
 

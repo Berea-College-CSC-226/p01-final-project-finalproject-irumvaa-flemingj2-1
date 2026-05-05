@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 
 my_theme = {
     "base": "#474448",
@@ -14,12 +15,13 @@ class MainWindow:
             "button": {},
             "textbox": {},
             "entry": {},
-            "label": {}
+            "label": {},
+            "combobox": {}
         }
         self.theme = my_theme
         self.root = tk.Tk()
-        self.root.minsize(width=470, height=300)
-        self.root.maxsize(width=470, height=300)
+        self.root.minsize(width=600, height=300)
+        self.root.maxsize(width=600, height=300)
         self.root.title("Cipher Tool")
         self.root.config(bg="#474448")
         self.root.update_idletasks()
@@ -35,6 +37,7 @@ class MainWindow:
         textbox = elm["textbox"]
         entry = elm["entry"]
         label = elm["label"]
+        combo = elm["combobox"]
         theme = self.theme
         wpx, hpx = self.wpx, self.hpx
 
@@ -58,6 +61,10 @@ class MainWindow:
         # init entry boxes
         entry["key"] = tk.Entry(frame["left_nav"])
 
+        # init combo-boxes
+        combo["cipher"] = ttk.Combobox(frame["left_nav"], values=("caesar", "symbol"), state="readonly")
+        combo["cipher"].set("caesar")
+
         # configure layout
         frame["left_nav"].pack(side=tk.LEFT, fill=tk.Y, expand=True)
         frame["right"].pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=10, pady=10)
@@ -69,6 +76,7 @@ class MainWindow:
         textbox["output"].pack(fill=tk.BOTH, expand=True)
         label["key"].pack(side=tk.TOP, padx=15, pady=1)
         entry["key"].pack(side=tk.TOP, padx=10, pady=5)
+        combo["cipher"].pack(side=tk.TOP, padx=10, pady=5)
 
     def get_textbox_text(self, box):
         textbox = self.elements["textbox"][box]
