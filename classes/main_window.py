@@ -63,6 +63,7 @@ class MainWindow:
 
         # init entry boxes
         entry["key"] = tk.Entry(frame["left_nav"])
+        entry["key"].insert(1, "0")
 
         # init combo-boxes
         combo["cipher"] = ttk.Combobox(frame["left_nav"], values=("caesar", "symbol"), state="readonly")
