@@ -41,7 +41,7 @@ def update_key(_event, window, config):
             cipher.key = int(key_value)
         except ValueError:
             cipher.key = 0
-            window.alert("Please set key to number for CaserCipher!")
+            window.alert("Please set key to number for CaesarCipher!")
         except Exception as err:
             window.alert(err)
 
