@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter import messagebox
 
 my_theme = {
     "base": "#474448",
@@ -118,3 +119,13 @@ class MainWindow:
             return (h * percent) // 1
         else:
             return 0
+
+    def alert(self, msg):
+        """
+        Displays message box with msg as text.
+        :param msg:
+        :return:
+        """
+        messagebox.showinfo("Alert", msg)
+        return
+
