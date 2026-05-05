@@ -34,6 +34,7 @@ into your own, following the process we've discussed in previous assignments, th
 
 - https://docs.python.org/3/library/tkinter.html
 - https://tkdocs.com/tutorial/
+- https://coolors.co/palettes/trending/grey
 
 ---
 
