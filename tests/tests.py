@@ -52,7 +52,6 @@ def run_tests(tests):
 
     print("{0}/{1} TESTS PASSED!".format(tests_passed, tests_ran))
 
-
 def main():
     """
     Setup and execution of tests.
