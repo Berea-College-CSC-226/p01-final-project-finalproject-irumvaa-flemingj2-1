@@ -1,5 +1,6 @@
 import os
 from PIL import Image
+
 class InputConverter:
     """
     Handles converting user input into a format
