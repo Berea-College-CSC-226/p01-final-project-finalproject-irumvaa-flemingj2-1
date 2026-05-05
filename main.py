@@ -19,8 +19,14 @@ def update_key(_event, window, cipher):
     window.root.focus()
     key_value = window.elements["entry"]["key"].get()
 
-    if cipher.name == "Caesar":
-        cipher.key = int(key_value)
+    if cipher.name.lower() == "caesar":
+        try:
+            cipher.key = int(key_value)
+        except ValueError as err:
+            cipher.key = 0
+            window.alert("Please set key to number for CaserCipher!")
+        except Exception as err:
+            window.alert(err)
 
     return
 
@@ -41,7 +47,7 @@ def main():
     }
     window.create_gui()
 
-    # ui elements to be binded
+    # ui elements to be used for bindings
     entry = window.elements["entry"]
     btn = window.elements["button"]
     combo = window.elements["combobox"]
