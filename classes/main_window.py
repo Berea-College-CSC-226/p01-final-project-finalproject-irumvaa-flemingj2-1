@@ -23,7 +23,6 @@ class MainWindow:
         self.root.title("Cipher Tool")
         self.root.config(bg="#474448")
         self.root.update_idletasks()
-        self.key_var = tk.StringVar()
 
     def create_gui(self):
         """
@@ -68,8 +67,8 @@ class MainWindow:
         btn["decode"].pack(side=tk.TOP, padx=20, pady=5)
         textbox["input"].pack(fill=tk.BOTH, expand=True)
         textbox["output"].pack(fill=tk.BOTH, expand=True)
-        label["key"].pack(side=tk.TOP, padx=20, pady=1)
-        entry["key"].pack(side=tk.TOP, padx=20, pady=5)
+        label["key"].pack(side=tk.TOP, padx=15, pady=1)
+        entry["key"].pack(side=tk.TOP, padx=10, pady=5)
 
     def get_textbox_text(self, box):
         textbox = self.elements["textbox"][box]
