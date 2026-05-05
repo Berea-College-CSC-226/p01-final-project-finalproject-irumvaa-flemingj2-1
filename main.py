@@ -1,5 +1,5 @@
 from classes.main_window import *
-from classes.caeser_cipher import CaesarCipher
+from classes.caesar_cipher import CaesarCipher
 
 def encode(_event, window, cipher):
     update_key(_event, window, cipher)
@@ -17,7 +17,11 @@ def decode(_event, window, cipher):
 
 def update_key(_event, window, cipher):
     window.root.focus()
-    cipher.key = window.elements["entry"]["key"].get()
+    key_value = window.elements["entry"]["key"].get()
+
+    if cipher.name == "Caesar":
+        cipher.key = int(key_value)
+
     return
 
 def main():

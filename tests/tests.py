@@ -1,7 +1,7 @@
 import types
 
 # imports for testing
-from classes.caeser_cipher import CaesarCipher
+from classes.caesar_cipher import CaesarCipher
 
 def add_test(tests, func, expected_output=None, *args):
     """
