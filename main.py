@@ -18,11 +18,13 @@ def main():
     use_cipher = CaesarCipher(5)
     window.create_gui()
 
-    btn = window.elements["buttons"]
+    entry = window.elements["entry"]
+    btn = window.elements["button"]
 
     # bind events
     btn["encode"].bind("<Button-1>", lambda event: encode(event, window, use_cipher))
     btn["decode"].bind("<Button-1>", lambda event: decode(event, window, use_cipher))
+    #entry["key"].bind
 
     window.root.mainloop()
 
