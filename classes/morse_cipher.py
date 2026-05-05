@@ -1,6 +1,4 @@
 # ref https://www.momjunction.com/articles/secret-ciphers-codes-for-kids_00736353/
-from rdkit.Chem.rdmolops import FindAllSubgraphsOfLengthN
-
 from classes.base_cipher import BaseCipher
 
 class MorseCipher(BaseCipher):
