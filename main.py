@@ -1,9 +1,24 @@
+######################################################################
+# Author: Jayden Fleming, Alain Irumva
+# Username: flemingj2, irumvaa
+#
+# Assignment: PO1
+# Purpose: GUI Cipher Tool
+####################################################################################
 from classes.main_window import MainWindow
 from classes.output_generator import OutputGenerator
 from classes.caesar_cipher import CaesarCipher
 from classes.morse_cipher import MorseCipher
 
 def encode(_event, window, config, exporter):
+    """
+    Encode connective logic
+    :param _event:
+    :param window:
+    :param config:
+    :param exporter:
+    :return:
+    """
     cipher = config["cipher"]
     update_key(_event, window, config)
     text = window.get_textbox_text("input")
@@ -19,6 +34,14 @@ def encode(_event, window, config, exporter):
     return
 
 def decode(_event, window, config, exporter):
+    """
+    Decode connective logic
+    :param _event:
+    :param window:
+    :param config:
+    :param exporter:
+    :return:
+    """
     cipher = config["cipher"]
     update_key(_event, window, config)
     text = window.get_textbox_text("input")
@@ -34,6 +57,13 @@ def decode(_event, window, config, exporter):
     return
 
 def update_key(_event, window, config):
+    """
+    Update cipher key
+    :param _event:
+    :param window:
+    :param config:
+    :return:
+    """
     cipher = config["cipher"]
     key_value = window.elements["entry"]["key"].get()
 
@@ -50,6 +80,14 @@ def update_key(_event, window, config):
     return
 
 def update_cipher(_event, window, ciphers, config):
+    """
+    Update config cipher
+    :param _event:
+    :param window:
+    :param ciphers:
+    :param config:
+    :return:
+    """
     selection = window.get_combobox_text("cipher")
     use_cipher = ciphers[selection]
     config["cipher"] = use_cipher
@@ -57,6 +95,13 @@ def update_cipher(_event, window, ciphers, config):
     return
 
 def update_output_type(_event, window, config):
+    """
+    Update config output type
+    :param _event:
+    :param window:
+    :param config:
+    :return:
+    """
     selection = window.get_combobox_text("output")
     config["output"] = selection
     window.fix_focus()
@@ -64,6 +109,10 @@ def update_output_type(_event, window, config):
 
 
 def main():
+    """
+    Core logic
+    :return:
+    """
     # init classes
     window = MainWindow()
     exporter = OutputGenerator()

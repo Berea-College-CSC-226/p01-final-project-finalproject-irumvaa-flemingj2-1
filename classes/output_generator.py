@@ -1,3 +1,12 @@
+######################################################################
+# Author: Jayden Fleming, Alain Irumva
+# Username: flemingj2, irumvaa
+#
+# Assignment: PO1
+# Purpose: GUI Cipher Tool
+######################################################################
+# Acknowledgements: ./original_code/HW10
+####################################################################################
 
 ######################################################################
 # Author: Alain Irumva and Jayden Fleming

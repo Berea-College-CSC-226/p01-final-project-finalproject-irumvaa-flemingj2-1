@@ -1,4 +1,13 @@
-# ref https://www.momjunction.com/articles/secret-ciphers-codes-for-kids_00736353/
+######################################################################
+# Author: Jayden Fleming, Alain Irumva
+# Username: flemingj2, irumvaa
+#
+# Assignment: PO1
+# Purpose: GUI Cipher Tool
+######################################################################
+# Acknowledgements:
+# - https://www.momjunction.com/articles/secret-ciphers-codes-for-kids_00736353/
+####################################################################################
 from classes.base_cipher import BaseCipher
 
 class MorseCipher(BaseCipher):
@@ -7,6 +16,9 @@ class MorseCipher(BaseCipher):
     """
     separator_char = "|"
     def __init__(self):
+        """
+        Init cipher.
+        """
         super().__init__("Morse", 0)
         self.morse_map = (
             ("a", ".-"),
@@ -50,7 +62,7 @@ class MorseCipher(BaseCipher):
 
     def encode(self, text):
         """
-        Encrypts text using morse_map
+        Encrypts text using morse_map.
         """
         result = ""
 
@@ -100,7 +112,3 @@ class MorseCipher(BaseCipher):
                 result += char_set
 
         return result
-
-
-
-

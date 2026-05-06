@@ -17,7 +17,10 @@
 **Source Assignment(s)**: `HW10 - Ciphers`
 
 **CRC Card(s)**
-[MainWindow](image/crc_MainWindow.png "MainWindow CRC")
+![MainWindow](image/crc_MainWindow.png "MainWindow CRC")
+![MorseCipher](image/crc_MorseCipher.png "MorseCipher CRC")
+![OutputGenerator](image/crc_OutputGenerator.png "OutputGenerator CRC")
+
 
 **Branches**: This project will **require** effective use of git. 
 
@@ -35,6 +38,7 @@ into your own, following the process we've discussed in previous assignments, th
 - https://docs.python.org/3/library/tkinter.html
 - https://tkdocs.com/tutorial/
 - https://coolors.co/palettes/trending/grey
+- https://www.momjunction.com/articles/secret-ciphers-codes-for-kids_00736353/
 
 ---
 
