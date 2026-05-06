@@ -1,3 +1,15 @@
+######################################################################
+# Author: Jayden Fleming, Alain Irumva
+# Username: flemingj2, irumvaa
+#
+# Assignment: PO1
+# Purpose: GUI Cipher Tool
+######################################################################
+# Acknowledgements:
+# - https://tkdocs.com/tutorial/
+# - https://coolors.co/palettes/trending/grey
+####################################################################################
+
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
@@ -93,16 +105,32 @@ class MainWindow:
         combo["output"].pack(side=tk.TOP, padx=10, pady=5)
 
     def get_textbox_text(self, box):
+        """
+        Get text of textbox.
+        :param box:
+        :return:
+        """
         textbox = self.elements["textbox"][box]
         return textbox.get(1.0, "end")
 
     def set_textbox_text(self, box, text):
+        """
+        Set text of given textbox.
+        :param box:
+        :param text:
+        :return:
+        """
         textbox = self.elements["textbox"][box]
         textbox.delete(1.0, "end")
         textbox.insert(1.0, text)
         return
 
     def get_combobox_text(self, box):
+        """
+        Gets text of given combobox.
+        :param box:
+        :return:
+        """
         combobox = self.elements["combobox"][box]
         return combobox.get()
 
