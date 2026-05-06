@@ -44,6 +44,7 @@ into your own, following the process we've discussed in previous assignments, th
 - https://tkdocs.com/tutorial/
 - https://coolors.co/palettes/trending/grey
 - https://www.momjunction.com/articles/secret-ciphers-codes-for-kids_00736353/
+- https://github.com/Berea-College-CSC-226/p01-final-project-finalproject-irumvaa-flemingj2-1/blob/irumvaa1/Input%20type%20detection%20guide.pdf
 
 ---
 
@@ -78,38 +79,20 @@ What has surprised you so far? Describe your general feelings. Be honest with yo
 
 ## Milestone 4: Final Code, Presentation, Demo
 
-### User Instructions
+### ❗User Instructions
 
-Notes: 
- - All elements of the UI are labeled.
- - Prompts will guide when errors occur.
- - IMPORTANT: Encode and Decode buttons always use the contents inside Input!
- - Not all ciphers require a key. (no prompt for this)
+❗In a paragraph, explain how to use your program. Assume the user is starting just after they hit the "Run" button 
+in PyCharm. 
 
-1. Run main.py
-2. Select a Cipher Type via the dropdown
-3. Enter a key if applicable
-4. Write text to be encoded or decoded inside the input box
-5. Selected your output type via the dropdown
-   - 'text' will output content to output box
-   - 'file' will output content to file in current directory called out_[somthing].txt
-     - 'file' will display prompt with further info on execution of task
-6. Press the 'encode' or 'decode' button respectively.
-7. View contents inside output box or created file respectively.
+### ❗Errors and Constraints
 
-### Errors and Constraints
+❗Every program has bugs or features that had to be scrapped for time. These bugs should be tracked in the issue queue. 
+You should already have a few items in here from the prior weeks. Create a new issue for any undocumented errors and 
+deficiencies that remain in your code. Bugs found that aren't acknowledged in the queue will be penalized.
 
-- Not all ciphers require a key, the UI does not communicate this.
-- Some issues with element focusing, but this problem is due to how tkinter works.
-- SymbolCipher is not implemented
-- Because of time constraints, we were not able to implement image encodings
-- Due to time constraints, some configuration elements were ommited.
-  - ability to change morse-code separation-char was not added
-- UTF-8 is only supported format in exporting of files.
+### ❗Reflection
 
-### Reflection
-
-Each partner should write three to four well-written paragraphs address the following (at a minimum):
+❗Each partner should write three to four well-written paragraphs address the following (at a minimum):
 - Why did you select the project that you did?
 - How closely did your final project reflect your initial design?
 - What did you learn from this process?
@@ -118,16 +101,7 @@ Each partner should write three to four well-written paragraphs address the foll
 - How well did you work with your partner? What made it go well? What made it challenging?
 
 ```
-    Partner 1 (flemingj2):
-    For this project we selected an application that would not be too difficult but not too simple either. We wanted something interesting, that we knew we could do given the time. The project we chose also allowed for a simple distribution of tasks which would be important in this class's case. The project roughly matched the initial design, but it evolved in some ways, and degraded in other qualities from what was envisioned.
-
-    I learned a lot regarding layout managers in this project. I also learned about python lambda events when figuring out how to have a function call another on another with certain parameters.
-
-    The most challenging part of this project was estimating how long something would take. Figuring out how to balance a mixed paradigm of functional and OOP was also difficult. It isn't easy to know what model will simplify a problem the most.
-
-    In a future project, I want to ensure I streamline the documentation phase better, in this project I felt it was out of order and created unnecessary resistance.
-
-    On the topic of my partner, I feel we worked together well. We used a combination of slack and library visits along with comments under the issue-queue to complete tasks effectively.
+    Partner 1: **Replace this with your reflection
 ```
 
 ```
