@@ -120,7 +120,7 @@ def main():
     # mutating vars
     ciphers = {
         "caesar": CaesarCipher(0),
-        "symbol": CaesarCipher(0),  # TODO
+        "symbol": None,  # TODO
         "morse": MorseCipher()
     }
 
