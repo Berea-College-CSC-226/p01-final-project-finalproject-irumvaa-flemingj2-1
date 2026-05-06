@@ -18,6 +18,9 @@
 
 **CRC Card(s)**
 ![MainWindow](image/crc_MainWindow.png "MainWindow CRC")
+![MorseCipher](image/crc_MorseCipher.png "MorseCipher CRC")
+![OutputGenerator](image/crc_OutputGenerator.png "OutputGenerator CRC")
+
 
 **Branches**: This project will **require** effective use of git. 
 
