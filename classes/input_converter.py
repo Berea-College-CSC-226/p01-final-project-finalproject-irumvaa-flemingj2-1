@@ -30,7 +30,11 @@ class InputConverter:
         return "unknown"
 
     def from_file(self, file_path):
-        """ Reads text input from a file and determines file type"""
+        """
+        Reads text input from a file and determines file type
+        :param file_path:
+        :return:
+        """
         extension= os.path.splitext(file_path)[1].lower()
         if extension == ".txt":
             with open(file_path, "r", encoding="utf-8") as file:
@@ -41,22 +45,38 @@ class InputConverter:
             raise ValueError("unsupported file type")
 
     def from_image(self, image_path):
-        """Handles image input"""
+        """
+        Handles image input
+        :param image_path:
+        :return:
+        """
         image = Image.open(image_path)
         return f"[IMAGE INPUT: {image.size}, mode={image.mode}]"
 
     def from_text(self, text):
-        """ Accepts direct text input (GUI or CLI)"""
+        """
+        Casts var to string
+        :param text:
+        :return:
+        """
         if not isinstance((text, str)):
             raise ValueError("Input must be a string")
         return text
 
     def normalize(self, text):
-        """ Normalizes text for cipher processing"""
+        """
+
+        :param text:
+        :return:
+        """
         return text.strip()
 
-    def convert (self, source):
-        """"""
+    def convert(self, source):
+        """
+        Gets text from given source
+        :param source:
+        :return:
+        """
         input_type = self.detect_type(source)
         if input_type == "file":
             return self.normalize(self.from_file(source))
