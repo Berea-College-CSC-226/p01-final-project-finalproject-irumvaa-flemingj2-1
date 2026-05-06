@@ -21,6 +21,10 @@ Note: CRC Cards also can be found in the google-doc.
 ![MainWindow](image/crc_MainWindow.png "MainWindow CRC")
 ![MorseCipher](image/crc_MorseCipher.png "MorseCipher CRC")
 ![OutputGenerator](image/crc_OutputGenerator.png "OutputGenerator CRC")
+![BaseCipher](image/crc_OutputGenerator.png "BaseCipher CRC")
+![CaesarCipher](image/crc_CaesarCipher.png "CaesarCipher CRC")
+![InputConverter](image/crc_InputConverter.png "InputConverter CRC")
+
 
 
 **Branches**: This project will **require** effective use of git. 
@@ -101,10 +105,11 @@ Notes:
 - Because of time constraints, we were not able to implement image encodings
 - Due to time constraints, some configuration elements were ommited.
   - ability to change morse-code separation-char was not added
+- UTF-8 is only supported format in exporting of files.
 
-### ❗Reflection
+### Reflection
 
-❗Each partner should write three to four well-written paragraphs address the following (at a minimum):
+Each partner should write three to four well-written paragraphs address the following (at a minimum):
 - Why did you select the project that you did?
 - How closely did your final project reflect your initial design?
 - What did you learn from this process?
