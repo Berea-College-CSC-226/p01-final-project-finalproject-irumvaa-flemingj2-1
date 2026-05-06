@@ -29,10 +29,7 @@ Note: CRC Cards also can be found in the google-doc.
 
 **Branches**: This project will **require** effective use of git. 
 
-Each partner should create a branch at the beginning of the project, and stay on this branch (or branches of their 
-branch) as they work. When you need to bring each others branches together, do so by merging each other's branches 
-into your own, following the process we've discussed in previous assignments, then re-branching out from the merged code.  
-
+Branches:
 ```
     Branch 1 starting name: flemingj2
     Branch 2 starting name: irumvaa1
@@ -44,16 +41,12 @@ into your own, following the process we've discussed in previous assignments, th
 - https://tkdocs.com/tutorial/
 - https://coolors.co/palettes/trending/grey
 - https://www.momjunction.com/articles/secret-ciphers-codes-for-kids_00736353/
-
+- https://github.com/Berea-College-CSC-226/p01-final-project-finalproject-irumvaa-flemingj2-1/blob/irumvaa1/Input%20type%20detection%20guide.pdf
 ---
 
 ## Milestone 2: Code Setup and Issue Queue
 
-Most importantly, keep your issue queue up to date, and focus on your code. 🙃
-
-Reflect on what you’ve done so far. How’s it going? Are you feeling behind/ahead? What are you worried about? 
-What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
-
+Reflection: 
 ```
     We started off a little behind, but as direction of project has become cleaer and we have become more organized, the timline for comepleting the project has become more manageble.
 ```
@@ -62,14 +55,9 @@ What has surprised you so far? Describe your general feelings. Be honest with yo
 
 ## Milestone 3: Virtual Check-In
 
-Indicate what percentage of the project you have left to complete and how confident you feel. 
-
 **Completion Percentage**: `60%`
 
-**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
-strategies you can employ to increase the likelihood that you'll be successful in completing this project 
-before the deadline.
-
+**Confidence**:
 ```
     Core prototype is layed out; one tactic to reduce stress in this project will be creating a bramch that has functionality separate from development branch.
 ```
@@ -109,16 +97,8 @@ Notes:
 
 ### Reflection
 
-Each partner should write three to four well-written paragraphs address the following (at a minimum):
-- Why did you select the project that you did?
-- How closely did your final project reflect your initial design?
-- What did you learn from this process?
-- What was the hardest part of the final project?
-- What would you do differently next time, knowing what you know now?
-- How well did you work with your partner? What made it go well? What made it challenging?
-
 ```
-    Partner 1 (flemingj2):
+    Partner 1 (Jayden):
     For this project we selected an application that would not be too difficult but not too simple either. We wanted something interesting, that we knew we could do given the time. The project we chose also allowed for a simple distribution of tasks which would be important in this class's case. The project roughly matched the initial design, but it evolved in some ways, and degraded in other qualities from what was envisioned.
 
     I learned a lot regarding layout managers in this project. I also learned about python lambda events when figuring out how to have a function call another on another with certain parameters.
@@ -131,7 +111,11 @@ Each partner should write three to four well-written paragraphs address the foll
 ```
 
 ```
-    Partner 2: **Replace this with your reflection
+    Partner 2 (Alain):
+    I personally chose to work on this project because I felt like I was struggling in some of my classes, especially with programming concepts. I wanted something that would help me practice more and improve my understanding step by step. I also wanted to learn more about building a GUI, since that was something new to me. This project gave me a chance to work with tools like Tkinter for the interface and Pillow for handling images, which helped me explore things I had not worked with before. As I worked on the project, I learned a lot about how to better organize code. 
+    At first, it was hard for me to understand how to break a program into smaller pieces, but using classes like BaseCipher, CaesarCipher, InputConverter, and OutputGenerator helped me see how each part has its own role. I also learned how important it is to plan before coding. 
+    When I did not plan well, I had to go back and fix things later. I also learned how to connect different parts of the program, especially how the GUI works with the cipher logic. One of the biggest things I learned was how to deal with problems and bugs. There were times when the program did not work as expected, such as issues with the key or switching cipher types, and I had to stop and figure out what was wrong. 
+    This helped me improve my debugging skills and made me more patient. I also learned that testing is very important and that I should test my code more often rather than waiting until the end. This project helped me grow not only in coding but also in problem-solving and learning how to keep improving when things are difficult.
 ```
 
 ---
