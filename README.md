@@ -17,7 +17,7 @@
 **Source Assignment(s)**: `HW10 - Ciphers`
 
 **CRC Card(s)**
-[MainWindow](image/crc_MainWindow.png "MainWindow CRC")
+![MainWindow](image/crc_MainWindow.png "MainWindow CRC")
 
 **Branches**: This project will **require** effective use of git. 
 
@@ -36,7 +36,7 @@ into your own, following the process we've discussed in previous assignments, th
 - https://tkdocs.com/tutorial/
 - https://coolors.co/palettes/trending/grey
 - https://www.momjunction.com/articles/secret-ciphers-codes-for-kids_00736353/
-- 
+
 ---
 
 ## Milestone 2: Code Setup and Issue Queue
