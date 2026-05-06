@@ -1,3 +1,13 @@
+######################################################################
+# Author: Jayden Fleming, Alain Irumva
+# Username: flemingj2, irumvaa
+#
+# Assignment: PO1
+# Purpose: GUI Cipher Tool
+######################################################################
+# Acknowledgements:
+####################################################################################
+
 import types
 
 # imports for testing

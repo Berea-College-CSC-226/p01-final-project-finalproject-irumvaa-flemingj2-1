@@ -1,3 +1,13 @@
+######################################################################
+# Author: Alain Irumva and Jayden Fleming
+# Username: irumvaa and flemingj
+#
+# Assignment: P01
+# Purpose: GUI Cipher Tool
+######################################################################
+# Acknowledgements:
+# Original Homework 10 code was created by course staff.
+####################################################################################
 import os
 from PIL import Image
 
